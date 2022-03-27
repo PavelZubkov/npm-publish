@@ -27,7 +27,10 @@ export async function readManifest(path: string, debug?: Debug): Promise<Manifes
   catch (error) {
     throw ono(error, `Unable to read ${path}`);
   }
-
+  console.log(111111)
+  console.log(json)
+  console.log(path)
+  console.log(JSON.parse(json))
   try {
     let { name, version } = JSON.parse(json) as Record<string, unknown>;
 
