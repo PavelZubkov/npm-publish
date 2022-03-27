@@ -612,6 +612,10 @@ async function readManifest(path, debug) {
     catch (error) {
         throw ono_1.ono(error, `Unable to read ${path}`);
     }
+    console.log(111111);
+    console.log(json);
+    console.log(path);
+    console.log(JSON.parse(json));
     try {
         let { name, version } = JSON.parse(json);
         if (typeof name !== "string" || name.trim().length === 0) {
