@@ -148,6 +148,7 @@ async function main() {
             dryRun: core_1.getInput("dry-run").toLowerCase() === "true",
             debug: debugHandler,
         };
+        console.log('DEBUGGG', 'Publish to NPM', JSON.stringify(options));
         // Publish to NPM
         let results = await npm_publish_1.npmPublish(options);
         if (results.type === "none") {

@@ -24,6 +24,7 @@ async function main(): Promise<void> {
       debug: debugHandler,
     };
 
+    console.log('DEBUGGG','Publish to NPM', JSON.stringify(options))
     // Publish to NPM
     let results = await npmPublish(options);
 
